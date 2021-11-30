@@ -25,4 +25,10 @@ class ipValidatorTests {
 		int[] expected = {1,2,3,4};
 		assertArrayEquals(expected,validator.getNumbers("1.2.3.4"));
 	}
+	
+	@Test
+	void ShouldBe_False_GivenStringWithThreeNumbersAndDots() {
+		IpValidator validator = new IpValidator();
+		assertFalse(validator.ValidateIpv4Address("1.2.3."));
+	}
 }
