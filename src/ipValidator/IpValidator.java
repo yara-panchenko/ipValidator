@@ -13,4 +13,9 @@ public class IpValidator {
 		return ipString.chars().filter(c->c=='.').count()==3;
 	}
 
+	public int[] getNumbers(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
