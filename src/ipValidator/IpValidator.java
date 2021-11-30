@@ -1,5 +1,7 @@
 package ipValidator;
 
+import java.util.Arrays;
+
 public class IpValidator {
 
 	public Boolean ValidateIpv4Address(String ipString) {
@@ -14,8 +16,7 @@ public class IpValidator {
 	}
 
 	public int[] getNumbers(String string) {
-		// TODO Auto-generated method stub
-		return null;
+		return Arrays.stream( string.split("\\.")).mapToInt(Integer::parseInt).toArray();
 	}
 
 }
