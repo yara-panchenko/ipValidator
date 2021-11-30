@@ -40,4 +40,10 @@ class ipValidatorTests {
 		assertFalse(validator.ValidateIpv4Address("1.256.3.4"));
 		assertFalse(validator.ValidateIpv4Address("312.2.3.4"));
 	}
+	
+	@Test
+	void ShouldBe_False_GivenIPstartingWithZero() {
+		IpValidator validator= new IpValidator();
+		assertFalse(validator.ValidateIpv4Address("0.2.3.4"));
+	}
 }
