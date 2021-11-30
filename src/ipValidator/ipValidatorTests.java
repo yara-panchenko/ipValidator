@@ -52,4 +52,16 @@ class ipValidatorTests {
 		IpValidator validator = new IpValidator();
 		assertFalse(validator.ValidateIpv4Address("1.2.3.0"));
 	}
+	
+	@Test
+	void ShouldBe_False_GivenIPstartingWith255() {
+		IpValidator validator= new IpValidator();
+		assertFalse(validator.ValidateIpv4Address("255.2.3.4"));
+	}
+	
+	@Test
+	void ShouldBe_False_GivenIPendingWith255() {
+		IpValidator validator = new IpValidator();
+		assertFalse(validator.ValidateIpv4Address("1.2.3.255"));
+	}
 }
